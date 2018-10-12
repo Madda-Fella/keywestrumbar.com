@@ -1,0 +1,30 @@
+header.header
+
+  a.logo(href="/")
+    img(src="/img/logo.png" alt="Madda Fella Rum Bar at Ocean Key Resort")
+
+  nav
+    .row.no-max
+      ul.primary-nav.nav-left
+        li
+          a(href="#scroll-hp-intro")
+          em •
+          | About
+          em •
+        li
+          a(href="#scroll-hp-events")
+          em •
+          | Events
+          em •
+      ul.primary-nav.nav-left
+        li
+          a(href="#scroll-hp-gallery")
+          em •
+          | Gallery
+          em •
+        li
+          a(href="https://www.oceankey.com/" target="_blank")
+          em •
+          | Ocean Key
+          em •
+        li test
