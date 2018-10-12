@@ -8,12 +8,13 @@
   },
   "bugs": "https://github.com/asasmith/keywestrumbar-com/issues",
   "dependencies": {
+    "postcss-mixins": "^6.2.0",
     "reshape-standard": "^3.3.0",
+    "spike": "^2.3.0",
     "spike-css-standards": "^4.0.0",
     "spike-js-standards": "^2.1.0",
     "spike-optimize": "^0.1.2",
     "spike-page-id": "^1.1.0",
-    "spike": "^2.3.0",
     "sugarml": "^0.7.0",
     "sugarss": "^1.0.1"
   },
@@ -35,5 +36,6 @@
     "start": "spike watch",
     "build": "spike compile",
     "prod": "NODE_ENV=production spike compile -e production"
-  }
+  },
+  "license": "MIT"
 }
