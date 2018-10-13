@@ -1,2 +1,95 @@
+body
+  font: normal 100%/150%
+  font-size: responsive 16px 18px
+
+main
+  /* remove this after dev */
+  min-height: 80vh
 ul
-  list-decoration: none
+  list-style: none
+
+li,
+a
+  text-decoration: none
+
+// layout
+.row
+  position: relative
+  max-width: 1200px
+  padding: 0
+  height: auto
+  margin: 0 auto
+  width: 90%
+  //@include clearfix();}
+
+  &.sm
+    max-width: 800px
+
+  & .xs
+    max-width: 500px
+
+  & .no-max
+    max-width:unset
+
+.flex
+  display: flex
+
+.columns
+  //margin-left: 4.4%
+  height: auto
+  min-height: 1px
+
+  &:first-child
+    margin-left: 0px
+
+  &.one
+    width: 4.3%
+
+  &.two
+    width: 13%
+
+  &.three
+    width: 21.68%
+
+  &.four
+    width: 30.4%
+
+    @media screen and (max-width: 1000px)
+      width: auto
+
+  &.five
+    width: 39.1%
+
+  &.six
+    width: 47.8%
+
+  &.seven
+    width: 56.5%
+
+  &.eight
+    width: 65.2%
+
+  &.nine
+    width: 73.9%
+
+  &.ten
+    width: 82.6%
+
+  &.eleven
+    width: 91.3%
+
+  &.twelve
+    width: 100%
+    margin-left: 0px
+
+.is-hidden
+  display: none
+
+// icons
+svg
+  &.icon
+    display: inline-block
+    fill: var(--brown)
+    height: 1.5rem
+    vertical-align: middle
+    width: 1.5rem
