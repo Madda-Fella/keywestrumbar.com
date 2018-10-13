@@ -1,0 +1,67 @@
+footer.row.flex
+
+	  .columns.four.fc-brand
+      figure.figure
+        img.figure__img(src="/img/mf-sailfish.png" alt="Madda Fella Logo")
+		  address
+		  	h3 The Madda Fella Rum Bar
+        | at Ocean Key Resort
+		  	p 0 Duval Street
+        | Key West, Florida 33040
+
+	  .columns.four.fc-hours
+		  h3.fc-hours__header Hours of Operation
+      ul.fc-hours__list
+        li.fc-hours__list-item
+          | Mon-Fri
+          span 10am - 6pm
+        li.fc-hours__list-item
+          | Saturday
+          span 10am -9pm
+        li.fc-hours__list-item
+          | Sunday
+          span Gone Drinking
+
+		  .social
+			  h3.social__header Follow Us
+			  ul.social__list
+				  li: a(href="https://www.facebook.com/maddafella" target="_blank")
+            |
+              svg(viewBox='0 0 16 28' class='icon icon__facebook')
+                use(xlink:href='#icon-facebook')
+				  li: a(href="https://twitter.com/maddafella" target="_blank")
+            |
+              svg(viewBox='0 0 28 28' class='icon icon__twitter')
+                use(xlink:href='#icon-twitter')
+				  li: a(href="https://www.youtube.com/channel/UCXO3om-mTDzo0RY9BhlROKw" target="_blank")
+            |
+              svg(viewBox='0 0 28 28' class='icon icon__youtube')
+                use(xlink:href='#icon-youtube')
+				  li: a(href="https://instagram.com/maddafella" target="_blank")
+            |
+              svg(viewBox='0 0 24 28' class='icon icon__instagram')
+                use(xlink:href='#icon-instagram')
+
+	  .columns.four.fc-nav
+
+		  ul.fc-nav__list
+			  li.fc-nav__list-item
+          a.fc-nav__link(href="#scroll-hp-intro") About
+		  	li.fc-nav__list-item
+          a.fc-nav__link(href="#scroll-hp-gallery") Gallery
+		  	li.fc-nav__list-item
+          a.fc-nav__link(href="https://www.oceankey.com/" target="_blank") Ocean Key Resort
+
+		  h3 #BELEGENDARY
+
+	  .columns.four.fc-news
+		  p.fc-news__header Join our growing list of buccaneers and keep in touch for the latest Madda Fella/Ocean Key Rum Bar news.
+		  form.footer-form(action="#" method="post")
+			  .form__input-group
+          lablel.form__label
+          input.form__input.form__input--name(type="text" value="" placeholder="Name" required)
+			  .form__input-group.form__input-group--submit
+			  	input.form__input.form__input--email(type="text" value="" placeholder="Email Address" required)
+			  	button.form__btn.form__btn--submit(type="submit")
+
+		  span.form-success.is-hidden Thanks for subscribing!
