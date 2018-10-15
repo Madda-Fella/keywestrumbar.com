@@ -1,0 +1,131 @@
+#hp-events
+  background-color: #f4f4f4
+  position: relative
+  padding: 80px 0
+  z-index: 3
+
+  & .flex
+
+    @media screen and (max-width: 1000px)
+      flex-direction: column
+
+    & .columns.five
+
+      @media screen and (max-width: 1000px)
+        width: 100%
+
+    & .columns.seven
+
+      @media screen and (max-width: 1000px)
+        width: 100%
+
+  & .section-intro
+
+    & h2
+      color: var(--brandPrimary)
+      margin-left: 0
+      margin-bottom: 14px
+      font-weight: 400
+      font-size: 2rem
+      line-height: 1.6
+
+  & .event-tabs
+    margin-top: 20px
+
+    & li
+      position: relative
+      border-top: 1px solid #f4f4f4
+      border-bottom: 1px solid #f4f4f4
+      margin: 6px 0
+
+      &.is-active
+        border-color: var(--brandPrimary)
+
+    & .event-tab__title
+      padding: 14px 0
+      display: block
+      max-width: 65%
+      pointer-events: none
+
+    & .event-tab__date
+      color: var(--brown)
+      display: block
+      pointer-events: none
+
+      &:first-child
+        font-family: var(--headerFont)
+        width: 60%
+        float: left
+        font-size: 18px
+        line-height: 1.2
+        font-weight: 300
+        letter-spacing: 0.5em
+
+      &:last-child
+        width: 40%
+        font-size: 14px
+        position: absolute
+        right: 0
+        bottom: 12px
+        text-align: right
+
+      &.active
+
+        &:first-child
+          width: 100%
+          font-size: 26px
+
+        &:last-child
+          display: none
+
+  & .event-tabs-content
+
+    & .event
+      display: none
+
+      &.is-active
+        display: flex
+        flex-direction: column
+
+    & .tab__header
+      display: block
+      font-family: var(--headerFont)
+      font-size: 1.2rem
+      color: var(--brandPrimary)
+      margin-bottom: 6px
+
+    & .tab__body
+      color: var(--brown)
+      margin-bottom: 14px
+      font-weight: 400
+      font-size: 18px
+      line-height: 1.6
+
+
+    & span
+      color: var(--brown)
+      margin-bottom: 14px
+      font-weight: 400
+      font-size: 18px
+      line-height: 1.6
+
+      & span
+        display: block
+        font-family: var(--headerFont)
+        color: var(--brandPrimary)
+        margin-bottom: 6px
+
+    & .event-date
+      float: left
+      width: 49%
+      font-weight: 600
+
+    & .event-time
+      float: right
+      width: 49%
+      font-weight: 600
+
+    & .event-details
+      clear: both
+      float: left
+      width: 100%

@@ -1,0 +1,28 @@
+#hp-gallery
+
+  .row
+	  .section-intro
+	  	h2 Explore Our Photo Gallery
+      p The Madda Fella/Ocean Key Rum Bar was built with all original materials, one plank at a time. Browse our photo gallery to get a better sense of our atmosphere and check out the reclaimed details.
+
+  .mf-gallery
+
+	  .mf-gallery-left
+
+      figure.gallery__figure
+        img.image-cont.popup-img(src="/img/mf-hp-gallery-1.jpg")
+
+	  .mf-gallery-right
+
+      figure.gallery__figure
+        img.gallery__img.popup-img(src="/img/mf-hp-gallery-2.jpg")
+      figure.gallery__figure
+        img.gallery__img.popup-img(src="/img/mf-hp-gallery-3.jpg")
+      figure.gallery__figure
+        img.gallery__img.popup-img(src="/img/mf-hp-gallery-4.jpg")
+      figure.gallery__figure
+        img.gallery__img.popup-img(src="/img/mf-hp-gallery-5.jpg")
+      figure.gallery__figure
+        img.gallery__img.popup-img(src="/img/mf-hp-gallery-6.jpg")
+      figure.gallery__figure
+        img.gallery__img.popup-img(src="/img/mf-hp-gallery-7.jpg")

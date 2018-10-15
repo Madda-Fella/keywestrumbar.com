@@ -1,2 +1,7 @@
 extends(src='layout.sgr')
   block(name='content')
+    include(src='/includes/_hp-fold.sgr')
+    include(src='/includes/_hp-intro.sgr')
+    include(src='/includes/_hp-events.sgr')
+    include(src='/includes/_hp-experience.sgr')
+    include(src='/includes/_hp-gallery.sgr')

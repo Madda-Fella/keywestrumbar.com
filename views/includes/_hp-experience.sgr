@@ -1,0 +1,15 @@
+#hp-experience
+
+  .row
+
+    .section-intro
+
+      h2.section-intro__header Choose your experience
+
+    .section-flex
+      figure.section__figure
+        img.section__img(src='/img/Recharge.png' alt='')
+        a.section__cta(href='#') Recharge
+      figure.section__figure
+        img.section__img(src='/img/Adventure.png' alt='')
+        a.section__cta(href='#') Adventure
