@@ -1,5 +1,6 @@
 body
   font: normal 100%/150%
+  font-family: var(--bodyFont)
   font-size: responsive 16px 18px
 
 main
@@ -11,6 +12,12 @@ ul
 li,
 a
   text-decoration: none
+
+h1,
+h2,
+h3,
+h4
+  font-family: var(--headerFont)
 
 // layout
 .row
@@ -33,6 +40,12 @@ a
 
 .flex
   display: flex
+
+  @media screen and (max-width: 600px)
+    flex-direction: column
+
+  &.justify-sb
+    justify-content: space-between
 
 .columns
   //margin-left: 4.4%

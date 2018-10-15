@@ -1,0 +1,8 @@
+section#hp-fold
+
+  .hp-fold__hero
+    img.hp-fold__hero-img(src='/img/be-legendary.png' alt='')
+
+  .hp-fold__footer
+    img.hp-fold__footer-img(src='/img/rum-bottles.png' alt='')
+

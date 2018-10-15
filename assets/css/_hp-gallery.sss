@@ -1,0 +1,94 @@
+#hp-gallery
+  background: url('/img/map-bg.jpg') no-repeat center center
+  background-size: cover
+  padding: 80px 0
+  text-align: center
+  position: relative
+  overflow: hidden
+
+  & .section-intro
+    margin: auto
+    max-width: 640px
+
+    & h2
+      color: var(--brandPrimary)
+      font-size: 32px
+      text-transform: uppercase
+      left: .04em
+      margin: 0 auto 30px
+      max-width: 450px
+
+    & p
+      color: var(--brown)
+      line-height: 2
+
+  & .mf-gallery
+    display: flex
+    width: calc(100% + 10px)
+    margin-left: -5px
+
+    & .mf-gallery-left
+      width: 40%
+
+      @media screen and (max-width: 600px)
+        display: none
+
+      & .gallery__figure
+        width: 100%
+        height: 0
+        padding-bottom: 100%
+        position: relative
+
+    & .mf-gallery-right
+      display: flex
+      flex-wrap: wrap
+      width: 60%
+
+      @media screen and (max-width: 600px)
+        width: 100%
+
+      & .gallery__figure
+        flex: 1 1 auto
+        height: 0
+        padding-bottom: 33.333%
+        position: relative
+        width: 33.333%
+
+        @media screen and (max-width: 600px)
+          padding-bottom: 50%
+          width: 50%
+
+        & .gallery__img
+          display: block
+          position: absolute
+          width: calc(100% - 10px)
+          top: 5px
+          left: 5px
+
+        & .image-cont
+          height: 400px
+          width: 400px
+
+    & .image-cont
+      display: block
+      width: 100%
+
+    & .gallery__figure
+
+      &:hover
+        &:after
+          opacity: .6
+
+      &:after
+        content: ""
+        display: block
+        position: absolute
+        top: 5px
+        right: 5px
+        bottom: 5px
+        left: 5px
+        background-color: var(--brandPrimary)
+        opacity: 0
+        transition: opacity .3s
+
+

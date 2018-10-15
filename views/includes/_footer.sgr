@@ -1,4 +1,5 @@
-footer.row.flex
+footer
+  .row.flex
 
 	  .columns.four.fc-brand
       figure.figure

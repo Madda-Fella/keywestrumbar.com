@@ -1,0 +1,27 @@
+#hp-fold
+  background: url(/img/hp-fold-bg.jpg) no-repeat center center
+  background-size: cover
+  display: flex
+  height: 90vh
+  position: relative
+
+  @media screen and (max-width: 1000px)
+    height: 60vh
+
+  & .hp-fold__hero
+    margin: auto
+    width: 75%
+    z-index: 1
+
+  & .hp-fold__hero-img
+    opacity: .35
+    width: 100%
+
+  & .hp-fold__footer
+    bottom: 0
+    left: 0
+    position: absolute
+    width: 100%
+
+  & .hp-fold__footer-img
+    width: 100%

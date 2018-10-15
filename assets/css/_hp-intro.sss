@@ -1,0 +1,97 @@
+#hp-intro
+  background-image: url('../img/map-bg.jpg')
+  background-size: 140% auto
+  background-position: top center
+  padding: 80px 0
+  position: relative
+  z-index: 2
+
+  & .flex
+
+    @media screen and (max-width: 1000px)
+      flex-direction: column
+
+  &:before
+    background: url('/img/map-extend.png') no-repeat center bottom
+    background-size: 140%
+    bottom: 100%
+    content: ''
+    height: 100px
+    left: 0
+    position: absolute
+    width: 100%
+    z-index: 3
+
+  & .hp-intro-text
+    margin-right: 2rem
+
+    @media screen and (max-width: 1000px)
+      width: 100%
+
+    & h1
+      color: var(--brandPrimary)
+      font-size: 42px
+
+      &:nth-child(2)
+        margin-bottom: 1rem
+
+    & > p
+      font-size: 16px
+      line-height: 1.8
+      margin-bottom: 1rem
+      position: relative
+
+      &:nth-of-type(1),
+      &:nth-of-type(4)
+        margin-bottom: 3rem
+
+        &:after
+          background-color: var(--brandPrimary)
+          bottom: -1.5rem
+          color: var(--brandPrimary)
+          content: ''
+          height: 2px
+          position: absolute
+          left: 0
+          width: 100%
+
+    & address
+      font-style: normal
+
+      & h3
+        color: var(--brown)
+        font-size: 26px
+
+      & p
+        font-size: 16px
+        margin: 10px 0 0
+        line-height: 1.4
+
+        &:last-child
+          font-style: italic
+          font-size: 14px
+          font-weight: 400
+          max-width: 360px
+
+  & .hp-intro-images
+
+    @media screen and (max-width: 1000px)
+      width: 100%
+
+  & img
+    width: 100%
+    height: auto
+    display: block
+    margin: 0 0 20px
+
+    &:nth-child(1)
+
+      @media screen and (max-width: 1000px)
+        display: none
+
+    @media screen and (max-width: 1000px)
+      margin-top: 2rem
+      width: 100%
+
+    &:last-child
+      margin-bottom: 0
