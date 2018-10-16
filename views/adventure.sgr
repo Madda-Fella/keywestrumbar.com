@@ -1,0 +1,69 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    section.hero
+      .row.flex
+
+        .columns.six.hero__body
+          h2.hero__header Adventure
+          p.hero__copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel suscipit sapien. Nam interdum, purus ac pellentesque consequat, ex eros accumsan turpis, feugiat tincidunt eros.
+
+        .columns.six.hero__img
+          figure.hero__figure
+            img(src='/img/Adventure-Top-Pic.png' alt='')
+
+    section#shop-experience
+
+      .row
+
+        .section-intro
+
+          h2.section-intro__header Shop the look
+
+        .section-flex
+          .item-wrapper
+            figure.item__figure
+              img.item__img(src='/img/SailwhiteLinenWeb_LW.png' alt='')
+            p.item__header LIGHT WEIGHT ERNEST LINEN SHIRT
+            p.item__desc SAIL WHITE
+            p.item__price $128.00
+            a.item__cta(href='https://maddafella.com/collections/linens' target='_blank') shop linen shirts
+
+          .item-wrapper
+            figure.item__figure
+              img.item__img(src='/img/Truman_Linen_Grey_1024x1024.png' alt='')
+            p.item__header CHOCOLATE
+            p.item__desc CHOCOLATE
+            p.item__price $108.00
+            a.item__cta(href='https://maddafella.com/collections/bottoms#linen-shorts' target='_blank') shop linen shorts
+
+    section#recipe
+
+      .recipe__outer
+
+        h2.recipe__header get the recipe
+
+        .recipe__inner
+          figure.recipe__figure
+            img.recipe__img(src='/img/MaiTai.png' alt='')
+
+          .recipe__content
+            h3.recipe__title Mai Tai
+            p.recipe__body Etiam iaculis accumsan lectus mollis cursus. Mauris sed quam vulputate, volutpat nibh id, hendrerit lorem.
+            ul.recipe__list
+              li.recipe__item 1 1/2 oz. Light Rum
+              li.recipe__item 3/4 oz. Dark Rum
+              li.recipe__item 3/4 oz. Orange Curacao
+              li.recipe__item 3/4 oz. Lime Juice
+              li.recipe__item 3/4 oz. Orgeat Syrup
+
+    section#footer-cta
+
+      .footer-cta__header
+        h2.footer-cta__title BOOK THE EXPERIENCE: Sail the keys
+        p.footer-cta__body Etiam iaculis accumsan lectus mollis cursus. Mauris sed quam vulputate, volutpat nibh id, hendrerit lorem.
+
+      .footer-cta__cta
+        label.footer-cta__label(for='email')
+        input.footer-cta__input(type='email' placeholder='Email')
+        button.footer-cta__btn get my coupon
