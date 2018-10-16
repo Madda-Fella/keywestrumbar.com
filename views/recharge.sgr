@@ -27,7 +27,7 @@ extends(src='layout.sgr')
             p.item__header Castaway Shirt
             p.item__desc chocolate/white stripe
             p.item__price $98.50
-            a.item__cta(href='#') shop castaway
+            a.item__cta(href='https://maddafella.com/collections/shirts#castaways' target='_blank') shop castaway
 
           .item-wrapper
             figure.item__figure
@@ -35,7 +35,7 @@ extends(src='layout.sgr')
             p.item__header Castaway Drawstring Shorts
             p.item__desc India ink
             p.item__price $72.00
-            a.item__cta(href='#') shop cord shorts
+            a.item__cta(href='https://maddafella.com/collections/cord-shorts' target='_blank') shop cord shorts
 
     section#recipe
 
