@@ -1,0 +1,76 @@
+#recipe
+  background: url('/img/background-horizontal-dark-wood-copy.jpg')
+  padding: 5vh
+
+  & .recipe__outer
+    width: 60%
+    margin: auto
+
+    @media screen and (max-width: 1000px)
+      width: 100%
+
+  & .recipe__header
+    color: var(--white)
+    font-size: 2.75rem
+    margin-bottom: 2rem
+    text-align: center
+
+  & .recipe__inner
+    display: flex
+
+    @media screen and (max-width: 600px)
+      flex-direction: column
+
+  & .recipe__figure
+    flex: 1 1 auto
+    width: 50%
+
+    @media screen and (max-width: 600px)
+      width: 100%
+
+  & .recipe__img
+    width: 100%
+
+    @media screen and (min-width: 1000px)
+      margin: auto
+      width: 80%
+
+  & .recipe__content
+    display: flex
+    flex: 1 1 auto
+    flex-direction: column
+    justify-content: space-around
+    text-align: center
+    width: 50%
+
+    @media screen and (max-width: 1000px)
+      width: 100%
+
+  & .recipe__title
+    color: var(--brandPrimary)
+    font-family: var(--headerFont)
+    font-size: 2rem
+    margin-bottom: 1rem
+
+  & .recipe__body
+    color: var(--white)
+    font-size: 1.2rem
+    line-height: 2
+    position: relative
+    margin-bottom: 2rem
+
+    &:after
+      content: ''
+      background-color: var(--white)
+      height: 1px
+      width: 5rem
+      position: absolute
+      bottom: -1rem
+      left: 50%
+      transform: translateX(-50%)
+
+  & .recipe__item
+    color: var(--white)
+    margin-bottom: .5rem
+    font-size: 1.1rem
+

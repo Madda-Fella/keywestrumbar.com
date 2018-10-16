@@ -1,0 +1,21 @@
+#hp-experience
+
+  .row
+
+    .section-intro
+
+      h2.section-intro__header Shop the look
+
+    .section-flex
+      figure.section__figure
+        img.section__img(src='/img/Castaway_Khaki_NB_REV_1024x1024.png' alt='')
+        p.section__item-header Castaway Shirt
+        p.section__item-desc chocolate/white stripe
+        p.section__item-price $98.50
+        a.section__cta(href='#') shop castaway
+      figure.section__figure
+        img.section__img(src='/img/BedfordCordMarineProductWeb_6e1a5efe-6fb0-4528-bb55-2c8a516cbae4.png' alt='')
+        p.section__item-header Castaway Drawstring Shorts
+        p.section__item-desc India ink
+        p.section__item-price $72.00
+        a.section__cta(href='#') shop cord shorts

@@ -9,7 +9,7 @@
     .section-flex
       figure.section__figure
         img.section__img(src='/img/Recharge.png' alt='')
-        a.section__cta(href='#') Recharge
+        a.section__cta(href='/recharge') Recharge
       figure.section__figure
         img.section__img(src='/img/Adventure.png' alt='')
-        a.section__cta(href='#') Adventure
+        a.section__cta(href='/recharge') Adventure
