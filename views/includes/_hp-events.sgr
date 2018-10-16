@@ -27,7 +27,7 @@
           .tab.event-date
             p.tab__header.event-date__header Event Date
             p.event-date__date October 19th - 28th
-            p.event-time &nbsp;
+            // p.event-time &nbsp;
 
           .event-details
               p.tab__header.event-details__header Event Details
@@ -37,7 +37,7 @@
           .tab.event-date
             p.tab__header.event-date__header Event Date
             p.event-date__date October 19th - 20th
-            p.event-time &nbsp;
+            // p.event-time &nbsp;
           .event-details
             p.tab__header.event-details__header >Event Details
             p.tab__body The Bahama Village Goombay Festival is a free family-friendly event! Held in Key West’s historic Bahama Village neighborhood, the lively Goombay is known for its island-style food, arts and crafts, nonstop live entertainment and dancing in the streets. Visitors can experience sights, sounds and flavors recalling Key West’s Bahamian heritage.
@@ -46,7 +46,7 @@
           .event-date
             p.tab__header.event-date__header Event Date
             p.event-date__date November 4th - 11th
-            span.event-time &nbsp;
+            // span.event-time &nbsp;
           .event-details
             p.tab__header.event-details__header Event Details
             p.tab__body Super Boat International returns with teams from all around the world who compete April through October in the National Series Points races and concludes in November for the famous Key West World Championships.
