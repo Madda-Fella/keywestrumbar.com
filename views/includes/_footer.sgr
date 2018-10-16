@@ -3,7 +3,8 @@ footer
 
 	  .columns.four.fc-brand
       figure.figure
-        img.figure__img(src="/img/mf-sailfish.png" alt="Madda Fella Logo")
+        a.logo__link(href='https://maddafella.com/' target='_blank')
+          img.figure__img(src="/img/mf-sailfish.png" alt="Madda Fella Logo")
 		  address
 		  	h3 The Madda Fella Rum Bar
         | at Ocean Key Resort
