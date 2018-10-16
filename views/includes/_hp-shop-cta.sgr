@@ -1,0 +1,4 @@
+section#shop-maddafella
+  a.shop__cta(href='https://maddafella.com/' target='_blank')
+    span show up looking like an islander
+    span Shop: maddafella.com
