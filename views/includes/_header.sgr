@@ -6,18 +6,18 @@ header.header
   nav.primary-nav
     ul.primary-nav__ul.nav-left
       li.primary-nav__list-item
-        a.primary-nav__link(href="#scroll-hp-intro")
+        a.primary-nav__link(href="#scroll-hp-intro" data-href='#scroll-hp-intro')
           em •
           | About
           em •
       li.primary-nav__list-item
-        a.primary-nav__link(href="#scroll-hp-events")
+        a.primary-nav__link(href="#scroll-hp-events" data-href='#scroll-hp-events')
           em •
           | Events
           em •
     ul.primary-nav__ul.nav-right
       li.primary-nav__list-item
-        a.primary-nav__link(href="#scroll-hp-gallery")
+        a.primary-nav__link(href="#scroll-hp-gallery" data-href='')
           em •
           | Gallery
           em •

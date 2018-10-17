@@ -6,7 +6,7 @@ extends(src='layout.sgr')
 
         .columns.six.hero__body
           h2.hero__header Adventure
-          p.hero__copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel suscipit sapien. Nam interdum, purus ac pellentesque consequat, ex eros accumsan turpis, feugiat tincidunt eros.
+          p.hero__copy Enjoy the thrill of adventure and dive into unknown territories.
 
         .columns.six.hero__img
           figure.hero__figure
@@ -49,7 +49,7 @@ extends(src='layout.sgr')
 
           .recipe__content
             h3.recipe__title Mai Tai
-            p.recipe__body Etiam iaculis accumsan lectus mollis cursus. Mauris sed quam vulputate, volutpat nibh id, hendrerit lorem.
+            p.recipe__body Vibrant colors light up this drink and may spark some excitement with each sip. The Mai Tai is the ideal drink for kicking off an exciting day ahead.
             ul.recipe__list
               li.recipe__item 1 1/2 oz. Light Rum
               li.recipe__item 3/4 oz. Dark Rum
@@ -61,9 +61,7 @@ extends(src='layout.sgr')
 
       .footer-cta__header
         h2.footer-cta__title BOOK THE EXPERIENCE: Sail the keys
-        p.footer-cta__body Etiam iaculis accumsan lectus mollis cursus. Mauris sed quam vulputate, volutpat nibh id, hendrerit lorem.
+        p.footer-cta__body Explore the Keys in open waters with Ocean Keys Sunset Sails.
 
       .footer-cta__cta
-        label.footer-cta__label(for='email')
-        input.footer-cta__input(type='email' placeholder='Email')
-        button.footer-cta__btn get my coupon
+        a.footer-cta__btn(href='https://www.oceankey.com/key-west-water-activities.aspx' target='_blank') book now
