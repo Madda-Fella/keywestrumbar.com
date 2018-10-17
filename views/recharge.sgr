@@ -62,6 +62,4 @@ extends(src='layout.sgr')
         p.footer-cta__body Sunset Pier is “the” place in Key West to enjoy Gulf side waterfront dining. Sit back and enjoy breathtaking views that make you feel far from home.
 
       .footer-cta__cta
-        label.footer-cta__label(for='email')
-        input.footer-cta__input(type='email' placeholder='Email')
-        button.footer-cta__btn(href='https://www.oceankey.com/key-west-sunset-pier.aspx' target='_blank') book now
+        a.footer-cta__btn(href='https://www.oceankey.com/key-west-sunset-pier.aspx' target='_blank') book now
