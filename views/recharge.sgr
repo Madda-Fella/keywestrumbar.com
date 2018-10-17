@@ -6,7 +6,7 @@ extends(src='layout.sgr')
 
         .columns.six.hero__body
           h2.hero__header Recharge
-          p.hero__copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel suscipit sapien. Nam interdum, purus ac pellentesque consequat, ex eros accumsan turpis, feugiat tincidunt eros.
+          p.hero__copy Escape the world and relax in Madda Fella’s softest styles.
 
         .columns.six.hero__img
           figure.hero__figure
@@ -49,7 +49,7 @@ extends(src='layout.sgr')
 
           .recipe__content
             h3.recipe__title Caipirinha
-            p.recipe__body Etiam iaculis accumsan lectus mollis cursus. Mauris sed quam vulputate, volutpat nibh id, hendrerit lorem.
+            p.recipe__body A classic synonymous with letting loose, the Caipirinha is the perfect drink to help you unwind and transition from real world into the Key West vibe.
             ul.recipe__list
               li.recipe__item 2 oz - Cachaça
               li.recipe__item 2 Tbls - Sugar
@@ -59,9 +59,9 @@ extends(src='layout.sgr')
 
       .footer-cta__header
         h2.footer-cta__title BOOK THE EXPERIENCE: HAPPY HOUR on the pier
-        p.footer-cta__body Etiam iaculis accumsan lectus mollis cursus. Mauris sed quam vulputate, volutpat nibh id, hendrerit lorem.
+        p.footer-cta__body Sunset Pier is “the” place in Key West to enjoy Gulf side waterfront dining. Sit back and enjoy breathtaking views that make you feel far from home.
 
       .footer-cta__cta
         label.footer-cta__label(for='email')
         input.footer-cta__input(type='email' placeholder='Email')
-        button.footer-cta__btn get my coupon
+        button.footer-cta__btn(href='https://www.oceankey.com/key-west-sunset-pier.aspx' target='_blank') book now

@@ -12,9 +12,10 @@ section#hp-intro
 
 		  address
 		  	h3 The Madda Fella Rum Bar at Ocean key Resort
-		  	p 0 Duval Street<br /> Key West, Florida 33040
+		  	p 0 Duval Street
+        p Key West, Florida 33040
 		  	p Located in the lobby of Ocean Key Resort, next to the Madda Fella Boutique
 
 	  .columns.six.hp-intro-images
-		  img(src="/img/hp-intro-1.png" alt="Glass of rum at Madda Fella Rum Bar")
-		  img(src="/img/hp-intro-2.png" alt="Madda Fella Rum Bar at Ocean Key Resort")
+		  img(src="/img/rum-bar-2.jpg" alt="Glass of rum at Madda Fella Rum Bar")
+		  img(src="/img/rum-bar-3.jpg" alt="Madda Fella Rum Bar at Ocean Key Resort")

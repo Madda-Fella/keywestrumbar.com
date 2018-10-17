@@ -19,10 +19,10 @@
       figure.gallery__figure
         img.gallery__img.popup-img(src="/img/mf-hp-gallery-3.jpg")
       figure.gallery__figure
-        img.gallery__img.popup-img(src="/img/mf-hp-gallery-4.jpg")
+        img.gallery__img.popup-img(src="/img/rum bar 7.jpeg")
       figure.gallery__figure
-        img.gallery__img.popup-img(src="/img/mf-hp-gallery-5.jpg")
+        img.gallery__img.popup-img(src="/img/rum-bar-8.jpg")
       figure.gallery__figure
-        img.gallery__img.popup-img(src="/img/mf-hp-gallery-6.jpg")
+        img.gallery__img.popup-img(src="/img/rum-bar-9.jpg")
       figure.gallery__figure
         img.gallery__img.popup-img(src="/img/mf-hp-gallery-7.jpg")
