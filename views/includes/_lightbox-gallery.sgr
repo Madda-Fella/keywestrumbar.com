@@ -1,0 +1,13 @@
+section#lightbox-gallery.is-hidden
+
+  p.lightbox__close X
+
+  .lightbox__wrapper
+
+
+    figure.lightbox-gallery__figure
+      img.lightbox-gallery__img
+
+    .lightbox__controls
+      .prev PREV
+      .next NEXT

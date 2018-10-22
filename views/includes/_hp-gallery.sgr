@@ -9,20 +9,20 @@
 
 	  .mf-gallery-left
 
-      figure.gallery__figure
-        img.image-cont.popup-img(src="/img/mf-hp-gallery-1.jpg")
+      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-1-fs.jpg')
+        img.image-cont(src="/img/mf-hp-gallery-1.jpg")
 
 	  .mf-gallery-right
 
-      figure.gallery__figure
-        img.gallery__img.popup-img(src="/img/mf-hp-gallery-2.jpg")
-      figure.gallery__figure
-        img.gallery__img.popup-img(src="/img/mf-hp-gallery-3.jpg")
-      figure.gallery__figure
-        img.gallery__img.popup-img(src="/img/rum bar 7.jpeg")
-      figure.gallery__figure
-        img.gallery__img.popup-img(src="/img/rum-bar-8.jpg")
-      figure.gallery__figure
-        img.gallery__img.popup-img(src="/img/rum-bar-9.jpg")
-      figure.gallery__figure
-        img.gallery__img.popup-img(src="/img/mf-hp-gallery-7.jpg")
+      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-2-fs.jpg')
+        img.gallery__img(src="/img/mf-hp-gallery-2.jpg")
+      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-3-fs.jpg')
+        img.gallery__img(src="/img/mf-hp-gallery-3.jpg")
+      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-7-fs.jpeg')
+        img.gallery__img(src="/img/rumbar-7-fs.jpeg")
+      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-8-fs.jpg')
+        img.gallery__img(src="/img/rum-bar-8.jpg")
+      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-9-fs.jpg')
+        img.gallery__img(src="/img/rum-bar-9.jpg")
+      figure.gallery__figure.lightbox-img(data-img='/img/mf-hp-gallery-7.jpg')
+        img.gallery__img(src="/img/mf-hp-gallery-7.jpg")
