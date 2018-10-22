@@ -61,7 +61,7 @@ extends(src='layout.sgr')
 
       .footer-cta__header
         h2.footer-cta__title BOOK THE EXPERIENCE: Sail the keys
-        p.footer-cta__body Explore the Keys in open waters with Ocean Keys Sunset Sails.
+        p.footer-cta__body Explore the Keys in open waters with Ocean Keys Sunset Sails and a broad mix of Key West adventures to fully experience our gorgeous island and waters.
 
       .footer-cta__cta
         a.footer-cta__btn(href='https://www.oceankey.com/key-west-water-activities.aspx' target='_blank') book now
