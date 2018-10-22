@@ -1,0 +1,55 @@
+#lightbox-gallery
+
+  &.is-hidden
+    visibility: hidden
+    z-index: 1
+
+  &.is-shown
+    align-items: center
+    background-color: color(black a(80%))
+    top: 0
+    bottom: 0
+    display: flex
+    height: 100%
+    justify-content: flex-end
+    position: fixed
+    right: 0
+    visibility: visible
+    width: 100%
+    z-index: 1
+
+  & .lightbox__wrapper
+    align-self: flex-end
+    margin-bottom: 5vh
+    position: relative
+    width: 100%
+
+  & .lightbox-gallery__figure
+    display: flex
+    justify-content: center
+    margin: auto
+    width: 80%
+
+  & .lightbox-gallery__img
+    max-width: 100%
+
+  & .lightbox__controls
+    color: var(--white)
+    display: flex
+    justify-content: space-between
+    left: 50%
+    margin: 0 auto
+    position: absolute
+    top: 50%
+    transform: translateX(-50%)
+    width: 90%
+
+  & .lightbox__close
+    background-color: var(--white)
+    border-radius: 100%
+    color: var(--black)
+    font-size: 3rem
+    padding: .5rem 1rem
+    position: absolute
+    right: 2rem
+    top: 1rem
