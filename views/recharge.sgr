@@ -55,6 +55,11 @@ extends(src='layout.sgr')
               li.recipe__item 2 Tbls - Sugar
               li.recipe__item 1/2 - Lime
 
+      .recipe-cta
+        label.recipe-cta__label(for='email')
+        input.recipe-cta__input(type='email' placeholder='Email')
+        button.recipe-cta__btn get the rum guide
+
     section#footer-cta
 
       .footer-cta__header
