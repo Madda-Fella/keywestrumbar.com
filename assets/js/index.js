@@ -47,21 +47,22 @@ var scrollSite = function(scrollTo){
   }
 }
 
-const navParent = document.querySelector('.primary-nav')
-const navItems = document.querySelectorAll('.primary-nav__link')
+const navItems = document.querySelectorAll('a[href^="#scroll"]')
 
-navParent.addEventListener('click', function (e) {
-  const scrollTo = e.target.href.slice(e.target.href.indexOf('#'))
+navItems.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    const scrollTo = e.target.href.slice(e.target.href.indexOf('#'))
 
-  if (scrollTo.length) {
-    e.preventDefault()
+    if (scrollTo.length) {
+      e.preventDefault()
 
-    if (window.location.pathname === '/') {
-      scrollSite(scrollTo)
-    } else {
-      window.location.href = `/${scrollTo}`
+      if (window.location.pathname === '/') {
+        scrollSite(scrollTo)
+      } else {
+        window.location.href = `/${scrollTo}`
+      }
     }
-  }
+  })
 })
 
 // get the hash and scroll to it when coming from another page
