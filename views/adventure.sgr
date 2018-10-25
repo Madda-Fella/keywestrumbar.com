@@ -57,6 +57,11 @@ extends(src='layout.sgr')
               li.recipe__item 3/4 oz. Lime Juice
               li.recipe__item 3/4 oz. Orgeat Syrup
 
+      .recipe-cta
+        label.recipe-cta__label(for='email')
+        input.recipe-cta__input(type='email' placeholder='Email')
+        button.recipe-cta__btn get the rum guide
+
     section#footer-cta
 
       .footer-cta__header
