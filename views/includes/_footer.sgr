@@ -15,14 +15,7 @@ footer
 		  h3.fc-hours__header Hours of Operation
       ul.fc-hours__list
         li.fc-hours__list-item
-          | Mon-Fri
-          span 10am - 6pm
-        li.fc-hours__list-item
-          | Saturday
-          span 10am -9pm
-        li.fc-hours__list-item
-          | Sunday
-          span Gone Drinking
+          | Noon - 8pm Daily
 
 		  .social
 			  h3.social__header Follow Us

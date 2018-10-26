@@ -24,16 +24,16 @@ extends(src='layout.sgr')
           .item-wrapper
             figure.item__figure
               img.item__img(src='/img/SailwhiteLinenWeb_LW.png' alt='')
-            p.item__header LIGHT WEIGHT ERNEST LINEN SHIRT
-            p.item__desc SAIL WHITE
+            p.item__header Light Weight Ernest Linen Shirt
+            p.item__desc Sail White
             p.item__price $128.00
             a.item__cta(href='https://maddafella.com/collections/linens' target='_blank') shop linen shirts
 
           .item-wrapper
             figure.item__figure
               img.item__img(src='/img/Truman_Linen_Grey_1024x1024.png' alt='')
-            p.item__header CHOCOLATE
-            p.item__desc CHOCOLATE
+            p.item__header Truman Linen Shorts
+            p.item__desc Chocolate
             p.item__price $108.00
             a.item__cta(href='https://maddafella.com/collections/bottoms#linen-shorts' target='_blank') shop linen shorts
 

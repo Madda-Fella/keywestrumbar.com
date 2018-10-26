@@ -11,5 +11,5 @@
         img.section__img(src='/img/Recharge.png' alt='')
         a.section__cta(href='/recharge') Recharge
       figure.section__figure
-        img.section__img(src='/img/Adventure.png' alt='')
+        img.section__img(src='/img/Adventure2.png' alt='')
         a.section__cta(href='/adventure') Adventure
