@@ -10,14 +10,14 @@
 
         ul.event-tabs
           li.event-tab.is-active(data-tab='tab1')
-            p.event-tab__title > Fantasy Fest
-              p.event-tab__date October 19th - 28th
-          li.event-tab(data-tab='tab2')
-            p.event-tab__title > Goombay Festival
-              p.event-tab__date October 19th - 20th
-          li.event-tab(data-tab='tab3')
             p.event-tab__title > 38th Annual Key West World Championship Super Boat Races
-              p.event-tab__date November 4th - 11th
+              p.event-tab__date November 4 - 11, 2018
+          li.event-tab(data-tab='tab2')
+            p.event-tab__title > Key West Film Festival
+              p.event-tab__date November 14 – 18, 2018
+          li.event-tab(data-tab='tab3')
+            p.event-tab__title > Thanksgiving in Key West 2018
+              p.event-tab__date November 22, 2018
 
     .columns.seven
 
@@ -26,28 +26,24 @@
         #tab1.event.is-active
           .tab.event-date
             p.tab__header.event-date__header Event Date
-            p.event-date__date October 19th - 28th
-            // p.event-time &nbsp;
-
+            p.event-date__date November 4 - 11, 2018
           .event-details
               p.tab__header.event-details__header Event Details
-              p.tab__body Fantasy Fest is an annual 10-day party in paradise for grown-ups. Started in 1979 by a small group of Key West locals, the party was created to bring visitors to the island in what was a typically quiet, but beautiful season. It worked. Fantasy Fest has grown every year since its inception and is now the wildest extravaganza around! Fun-loving revelers from around the globe bring their creativity and imaginations as they descend upon Key West each year in October for 10 days filled with costuming, parades, libations, and excitement!
+              p.tab__body Super Boat International returns with teams from all around the world who compete April through October in the National Series Points races and concludes in November for the famous Key West World Championships.
 
         #tab2.event
           .tab.event-date
             p.tab__header.event-date__header Event Date
-            p.event-date__date October 19th - 20th
-            // p.event-time &nbsp;
+            p.event-date__date November 14 - 18, 2018
           .event-details
-            p.tab__header.event-details__header >Event Details
-            p.tab__body The Bahama Village Goombay Festival is a free family-friendly event! Held in Key West’s historic Bahama Village neighborhood, the lively Goombay is known for its island-style food, arts and crafts, nonstop live entertainment and dancing in the streets. Visitors can experience sights, sounds and flavors recalling Key West’s Bahamian heritage.
+            p.tab__header.event-details__header Event Details
+            p.tab__body The Key West Film Festival is a days-long event filled with movie screenings, kick-off party, and awards gala for independent filmmakers. Award categories include narrative feature film, LGBT feature film, documentary, Florida feature film, and foreign feature film.
 
         #tab3.event
           .event-date
             p.tab__header.event-date__header Event Date
-            p.event-date__date November 4th - 11th
-            // span.event-time &nbsp;
+            p.event-date__date November 22
           .event-details
             p.tab__header.event-details__header Event Details
-            p.tab__body Super Boat International returns with teams from all around the world who compete April through October in the National Series Points races and concludes in November for the famous Key West World Championships.
+            p.tab__body Experience traditional turkey in a tropical setting. Residents and visitors come together to celebrate the season of thanks with holiday menus across local restaurants.
 

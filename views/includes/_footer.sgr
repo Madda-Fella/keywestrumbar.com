@@ -8,21 +8,14 @@ footer
 		  address
 		  	h3 The Madda Fella Rum Bar
         | at Ocean Key Resort
-		  	p 0 Duval Street
+		  	p Zero Duval Street
         | Key West, Florida 33040
 
 	  .columns.four.fc-hours
 		  h3.fc-hours__header Hours of Operation
       ul.fc-hours__list
         li.fc-hours__list-item
-          | Mon-Fri
-          span 10am - 6pm
-        li.fc-hours__list-item
-          | Saturday
-          span 10am -9pm
-        li.fc-hours__list-item
-          | Sunday
-          span Gone Drinking
+          | Noon - 8pm Daily
 
 		  .social
 			  h3.social__header Follow Us
@@ -57,7 +50,7 @@ footer
 		  h3 #BELEGENDARY
 
 	  .columns.four.fc-news
-		  p.fc-news__header Join our growing list of buccaneers and keep in touch for the latest Madda Fella/Ocean Key Rum Bar news.
+		  p.fc-news__header Join our growing list of buccaneers and keep in touch for the latest Madda Fella Rum Bar at Ocean Key Resort news.
 		  form.footer-form(action="#" method="post")
 			  .form__input-group
           lablel.form__label
