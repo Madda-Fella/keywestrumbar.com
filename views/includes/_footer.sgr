@@ -8,7 +8,7 @@ footer
 		  address
 		  	h3 The Madda Fella Rum Bar
         | at Ocean Key Resort
-		  	p 0 Duval Street
+		  	p Zero Duval Street
         | Key West, Florida 33040
 
 	  .columns.four.fc-hours
@@ -50,7 +50,7 @@ footer
 		  h3 #BELEGENDARY
 
 	  .columns.four.fc-news
-		  p.fc-news__header Join our growing list of buccaneers and keep in touch for the latest Madda Fella/Ocean Key Rum Bar news.
+		  p.fc-news__header Join our growing list of buccaneers and keep in touch for the latest Madda Fella Rum Bar at Ocean Key Resort news.
 		  form.footer-form(action="#" method="post")
 			  .form__input-group
           lablel.form__label
