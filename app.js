@@ -1,9 +1,13 @@
+require('dotenv').config({ silent: true })
+
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const sugarml = require('sugarml')
 const sugarss = require('sugarss')
+const SpikeDatoCMS = require('spike-datocms')
+const locals = {}
 const env = process.env.SPIKE_ENV
 
 module.exports = {
@@ -12,7 +16,8 @@ module.exports = {
   ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock', 'package-lock.json'],
   reshape: htmlStandards({
     parser: sugarml,
-    locals: (ctx) => { return { pageId: pageId(ctx), foo: 'bar' } },
+    root: './views',
+    locals: (ctx) => { return Object.assign(locals, { pageId: pageId(ctx) }) },
     minify: env === 'production'
   }),
   postcss: cssStandards({
@@ -22,4 +27,35 @@ module.exports = {
   }),
   babel: jsStandards(),
   server: {open: false},
+  plugins: [
+    new SpikeDatoCMS({
+      addDataTo: locals,
+      token: process.env.DATO_CMS_READ_ONLY,
+      models: [
+        {
+          name: 'hp_about',
+        },
+        {
+          name: 'hp_event',
+        },
+        {
+          name: 'hp_gallery',
+        },
+        {
+          name: 'address',
+        },
+        {
+          name: 'hours_of_op',
+        },
+        {
+          name: 'mf_exp_page',
+          template: {
+            path: 'views/mf-exp-landing-template.sgr',
+            output: (lp) => { return `shop-the-experience/${lp.title.toLowerCase()}.html`},
+          },
+        },
+      ],
+      json: 'data.json'
+    })
+  ]
 }
