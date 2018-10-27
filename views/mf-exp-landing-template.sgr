@@ -79,4 +79,4 @@ html
       include(src='/includes/_footer.sgr')
       include(src='/includes/_icon-sprite.sgr')
       block(name='javascript')
-        script(src='js/main.js' defer)
+        script(src='/js/main.js' defer)
