@@ -7,9 +7,9 @@
       h2.section-intro__header Choose your experience
 
     .section-flex
-      figure.section__figure
-        img.section__img(src='/img/Recharge.png' alt='')
-        a.section__cta(href='/shop-the-experience/recharge') Recharge
-      figure.section__figure
-        img.section__img(src='/img/Adventure.png' alt='')
-        a.section__cta(href='/adventure') Adventure
+
+      each(loop='page, index in dato.mf_exp_page')
+        if(condition='index < 2')
+          figure.section__figure
+            img.section__img(src='https://{{ dato._meta.imgixHost + page.hpImage.path }}?fit=crop&w=600&auto=compress' alt='')
+            a.section__cta(href='/shop-the-experience/{{ page.title.toLowerCase() }}') {{ page.title }}
