@@ -2,27 +2,19 @@
 
   .row
 	  .section-intro
-	  	h2 Explore Our Photo Gallery
-      p The Madda Fella Rum Bar at Ocean Key Resort was built with all original materials, one plank at a time. Browse our photo gallery to get a better sense of our atmosphere and check out the reclaimed details.
+	  	h2 {{ dato.hp_gallery[0].header }}
+      p {{ dato.hp_gallery[0].intro}}
 
   .mf-gallery
 
-	  .mf-gallery-left
+    .mf-gallery-left
+      figure.gallery__figure.lightbox-img(data-img='https://{{ dato._meta.imgixHost + dato.hp_gallery[0].images[0].path }}?fit=crop&w=1200&max-h=800&q=90' alt='')
+        img.image-cont(src="https://{{ dato._meta.imgixHost + dato.hp_gallery[0].images[0].path }}?fit=crop&w=700&h=700&q=75" alt='')
 
-      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-1-fs.jpg')
-        img.image-cont(src="/img/mf-hp-gallery-1.jpg")
+    .mf-gallery-right
 
-	  .mf-gallery-right
+      each(loop='img, index in dato.hp_gallery[0].images')
+        if(condition="index > 0")
 
-      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-2-fs.jpg')
-        img.gallery__img(src="/img/mf-hp-gallery-2.jpg")
-      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-3-fs.jpg')
-        img.gallery__img(src="/img/mf-hp-gallery-3.jpg")
-      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-7-fs.jpeg')
-        img.gallery__img(src="/img/rumbar-7-fs.jpeg")
-      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-8-fs.jpg')
-        img.gallery__img(src="/img/rum-bar-8.jpg")
-      figure.gallery__figure.lightbox-img(data-img='/img/rumbar-9-fs.jpg')
-        img.gallery__img(src="/img/rum-bar-9.jpg")
-      figure.gallery__figure.lightbox-img(data-img='/img/mf-hp-gallery-7.jpg')
-        img.gallery__img(src="/img/mf-hp-gallery-7.jpg")
+          figure.gallery__figure.lightbox-img(data-img='https://{{ dato._meta.imgixHost + img.path }}?fit=crop&max-w=1200&max-h=800&q=90' alt='')
+            img.gallery__img(src="https://{{ dato._meta.imgixHost + img.path }}?fit=crop&w=400&h=400&q=75")

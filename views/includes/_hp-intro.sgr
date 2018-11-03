@@ -3,21 +3,16 @@ section#hp-intro
   .row.flex.justify-sb
 
 	  .columns.six.hp-intro-text
-		  h1 The Madda Fella Rum Bar at
-      h1 Ocean Key Resort
-		  p Welcome to the Madda Fella at Ocean Key Rum Bar! We love experiencing the fullness of life, soaking up the sun, and exploring the gorgeous surroundings of Key West. With that comes enjoying a great pirate story and a charming glass of rum.
-		  p We built the Madda Fella at Ocean Key Rum Bar from scratch, intentionally using reclaimed barn wood, tins, and fixtures. You won’t find any prefabricated materials here — our bar is just as authentic as our rum drinks.
-		  p
-		  p
-        a(href='https://maddafella.com/') While you’re here,
-        |  Swing in and check out our Madda Fella clothing company — the top clothing brand in Key West, enjoy an evening of live music & breathtaking views at the Tiki Bar at Sunset Pier, or go on a sailing adventure with our partners at Ocean Key Resort.
+      h1 {{ dato.hp_about[0].header }}
+		  p {{ dato.hp_about[0].intro}}
+		  div.md-copy(md) {{ dato.hp_about[0].body}}
 
 		  address
-		  	h3 The Madda Fella Rum Bar at Ocean key Resort
-		  	p Zero Duval Street
-        p Key West, Florida 33040
-		  	p Located in the lobby of Ocean Key Resort, next to the Madda Fella Boutique
+		  	h3 {{ dato.hp_about[0].header }}
+		  	p {{ dato.address[0].street }}
+        p {{ dato.address[0].cityStateZip }}
+		  	p {{ dato.address[0].locatedIn }}
 
 	  .columns.six.hp-intro-images
-		  img(src="/img/rum-bar-2.jpg" alt="Glass of rum at Madda Fella Rum Bar")
-		  img(src="/img/rum-bar-3.jpg" alt="Madda Fella Rum Bar at Ocean Key Resort")
+      each(loop='img in dato.hp_about[0].images')
+        img(src='https://{{ dato._meta.imgixHost + img.path }}' alt='')

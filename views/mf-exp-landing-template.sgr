@@ -1,0 +1,82 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='description' content='')
+    meta(name='author' content='asasmith')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    block(name='title')
+      title Title of Your Site
+
+    link(rel='stylesheet' href='/css/index.css')
+
+  body
+    include(src='/includes/_header.sgr')
+    main#exp-landing-page
+
+      section.hero
+        .row.flex
+
+          .columns.six.hero__body
+            h2.hero__header {{ item.title }}
+            p.hero__copy {{ item.hero }}
+
+          .columns.six.hero__img
+            figure.hero__figure
+              img(src='https://{{ dato._meta.imgixHost + item.heroImage.path}}?fit=crop&w=630&auto=compress' alt='')
+
+      section#shop-experience
+
+        .row
+
+          .section-intro
+
+            h2.section-intro__header Shop the look
+
+
+          .section-flex
+
+            each(loop='product in item.shop')
+              .item-wrapper
+                figure.item__figure
+                  img.item__img(src='https://{{ dato._meta.imgixHost + product.productImg.path }}?fit=crop&w=500&h=500&auto=compress' alt='')
+                p.item__header {{ product.productTitle}}
+                p.item__desc {{ product.productDescription }}
+                p.item__price {{ product.productPrice }}
+                a.item__cta(href='{{ product.productLink }}' target='_blank') {{ product.ctaText }}
+      section#recipe
+
+        .recipe__outer
+
+          h2.recipe__header get the recipe
+
+          .recipe__inner
+            figure.recipe__figure
+              img.recipe__img(src='https://{{ dato._meta.imgixHost + item.drink[0].img.path }}?fit=crop&w=400&auto=compress' alt='')
+
+            .recipe__content
+              h3.recipe__title  {{ item.drink[0].name }}
+              p.recipe__body {{ item.drink[0].description }}
+              div(md).recipe__list {{ item.drink[0].recipe }}
+
+        .recipe-cta
+          label.recipe-cta__label(for='email')
+          input.recipe-cta__input(type='email' placeholder='Email')
+          button.recipe-cta__btn get the rum guide
+
+      section#footer-cta
+
+        .footer-cta__header
+          h2.footer-cta__title BOOK THE EXPERIENCE: HAPPY HOUR on the pier
+          p.footer-cta__body Sunset Pier is “the” place in Key West to enjoy Gulf side waterfront dining. Sit back and enjoy breathtaking views that make you feel far from home.
+
+        .footer-cta__cta
+          a.footer-cta__btn(href='{{ item.experienceFooter[0].ctaLink }}' target='_blank') book now
+
+
+      include(src='/includes/_footer.sgr')
+      include(src='/includes/_icon-sprite.sgr')
+      block(name='javascript')
+        script(src='/js/main.js' defer)

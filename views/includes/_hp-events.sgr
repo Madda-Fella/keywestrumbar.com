@@ -5,45 +5,37 @@
     .columns.five
 
       .section-intro
-        h2 Upcoming Events
-        p What’s happening at the Madda Fella Rum Bar? We’ve got the rum, the music, and the atmosphere — the only thing missing is you! Join us for our upcoming events, right here at the bar.
+        h2 {{ dato.hp_event[0].header }}
+        p {{ dato.hp_event[0].intro }}
 
         ul.event-tabs
-          li.event-tab.is-active(data-tab='tab1')
-            p.event-tab__title > 38th Annual Key West World Championship Super Boat Races
-              p.event-tab__date November 4 - 11, 2018
-          li.event-tab(data-tab='tab2')
-            p.event-tab__title > Key West Film Festival
-              p.event-tab__date November 14 – 18, 2018
-          li.event-tab(data-tab='tab3')
-            p.event-tab__title > Thanksgiving in Key West 2018
-              p.event-tab__date November 22, 2018
+          each(loop='event, index of dato.hp_event[0].events')
+            if(condition='index === 0')
+              li.event-tab.is-active(data-tab='tab{{ index }}')
+                p.event-tab__title > {{ event.title }}
+                p.event-tab__date {{ event.date }}
+            else
+              li.event-tab(data-tab='tab{{ index }}')
+                p.event-tab__title > {{ event.title }}
+                p.event-tab__date {{ event.date }}
 
     .columns.seven
 
       .event-tabs-content
-
-        #tab1.event.is-active
-          .tab.event-date
-            p.tab__header.event-date__header Event Date
-            p.event-date__date November 4 - 11, 2018
-          .event-details
-              p.tab__header.event-details__header Event Details
-              p.tab__body Super Boat International returns with teams from all around the world who compete April through October in the National Series Points races and concludes in November for the famous Key West World Championships.
-
-        #tab2.event
-          .tab.event-date
-            p.tab__header.event-date__header Event Date
-            p.event-date__date November 14 - 18, 2018
-          .event-details
-            p.tab__header.event-details__header Event Details
-            p.tab__body The Key West Film Festival is a days-long event filled with movie screenings, kick-off party, and awards gala for independent filmmakers. Award categories include narrative feature film, LGBT feature film, documentary, Florida feature film, and foreign feature film.
-
-        #tab3.event
-          .event-date
-            p.tab__header.event-date__header Event Date
-            p.event-date__date November 22
-          .event-details
-            p.tab__header.event-details__header Event Details
-            p.tab__body Experience traditional turkey in a tropical setting. Residents and visitors come together to celebrate the season of thanks with holiday menus across local restaurants.
-
+        each(loop='event, index of dato.hp_event[0].events')
+          if(condition="index === 0")
+            #tab{{index}}.event.is-active
+              .tab.event-date
+                p.tab__header.event-date__header Event Date
+                p.event-date__date {{ event.date }}
+              .event-details
+                p.tab__header.event-details__header Event Details
+                p.tab__body {{ event.details }}
+          else
+            #tab{{index}}.event
+              .tab.event-date
+                p.tab__header.event-date__header Event Date
+                p.event-date__date {{ event.date }}
+              .event-details
+                p.tab__header.event-details__header Event Details
+                p.tab__body {{ event.details }}
