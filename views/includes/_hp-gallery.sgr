@@ -4,6 +4,7 @@
 	  .section-intro
 	  	h2 {{ dato.hp_gallery[0].header }}
       p {{ dato.hp_gallery[0].intro}}
+
   .mf-gallery
 
     .mf-gallery-left

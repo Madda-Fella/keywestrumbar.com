@@ -8,6 +8,7 @@ footer
 		  address
 		  	h3 The Madda Fella Rum Bar
         | at Ocean Key Resort
+
 		  	p {{ dato.address[0].street }}
         | {{ dato.address[0].cityStateZip }}
 

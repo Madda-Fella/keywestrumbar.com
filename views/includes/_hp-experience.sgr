@@ -7,7 +7,6 @@
       h2.section-intro__header Choose your experience
 
     .section-flex
-
       each(loop='page, index in dato.mf_exp_page')
         if(condition='index < 2')
           figure.section__figure

@@ -24,5 +24,5 @@ header.header
       li.primary-nav__list-item
         a.primary-nav__link(href="https://www.oceankey.com/" target="_blank")
           em •
-          | Ocean Key
+          | Ocean Key Resort
           em •

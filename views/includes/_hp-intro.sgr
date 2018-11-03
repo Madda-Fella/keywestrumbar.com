@@ -7,7 +7,6 @@ section#hp-intro
 		  p {{ dato.hp_about[0].intro}}
 		  div.md-copy(md) {{ dato.hp_about[0].body}}
 
-
 		  address
 		  	h3 {{ dato.hp_about[0].header }}
 		  	p {{ dato.address[0].street }}
