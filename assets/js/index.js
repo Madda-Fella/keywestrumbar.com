@@ -32,6 +32,14 @@ if (document.querySelector('#index')) {
   })()
 }
 
+if (document.querySelector('.md-copy')) {
+  const linksArr = document.querySelectorAll('.md-copy a[href^="http://"], a[href^="https://"]')
+
+  linksArr.forEach((link) => {
+    link.setAttribute('target', '_blank')
+  })
+}
+
 //scroll nav
 
 var scrollSite = function(scrollTo){
