@@ -53,12 +53,13 @@ footer
 
 	  .columns.four.fc-news
 		  p.fc-news__header Join our growing list of buccaneers and keep in touch for the latest Madda Fella Rum Bar at Ocean Key Resort news.
-		  form.footer-form(action="#" method="post")
+		  form.footer-form.form__mc-js-rumbar-signup(action="#" method="post" target='_blank')
 			  .form__input-group
           lablel.form__label
-          input.form__input.form__input--name(type="text" value="" placeholder="Name" required)
+          input.form__input.form__input--name(type="text" name='NAME' id='mce-NAME' value="" placeholder="Name" required)
 			  .form__input-group.form__input-group--submit
-			  	input.form__input.form__input--email(type="text" value="" placeholder="Email Address" required)
+          label.form__label
+			  	input.form__input.form__input--email(type="text" name='EMAIL' id='mce-EMAIL' value="" placeholder="Email Address" required)
 			  	button.form__btn.form__btn--submit(type="submit")
 
 		  span.form-success.is-hidden Thanks for subscribing!
