@@ -7,8 +7,9 @@ if (document.querySelector('.form__mc-js-rumbar-signup')) {
   const form = document.querySelector('.form__mc-js-rumbar-signup')
   const formInputs = form.querySelectorAll('input')
   const formSubmitButton = form.querySelector('.form__btn--submit')
-  const url = "https://maddafella.us13.list-manage.com/subscribe/post-json?u=3227b92f0c70395f6cb82d51b&amp;id=50bb67b678&c=callBack"
+  const url = `https://maddafella.us13.list-manage.com/subscribe/post-json?u=3227b92f0c70395f6cb82d51b&amp;id=50bb67b678&c=callBack`
   let successMessageDiv = document.querySelector('.fc-news__header')
+
 
   formSubmitButton.addEventListener('click', (e) => {
     e.preventDefault()
@@ -44,9 +45,53 @@ if (document.querySelector('.form__mc-js-rumbar-signup')) {
       }
     }
   })
+}
 
+if (document.querySelector('.form__mc-js-rumguide-signup')) {
+  const form = document.querySelector('.form__mc-js-rumguide-signup')
+  const formInputs = form.querySelectorAll('input')
+  const emailInput = document.getElementById('mce-EMAIL')
+  const formSubmitButton = form.querySelector('.form__btn--submit')
+  const url = `https://maddafella.us13.list-manage.com/subscribe/post-json?u=3227b92f0c70395f6cb82d51b&amp;id=27662d09cf&c=callBack`
 
+  formSubmitButton.addEventListener('click', (e) => {
+    e.preventDefault()
 
+    // Create & add post script to the DOM
+    const script = document.createElement('script');
+    script.src = `${url}&${serialize(form)}`;
+    document.body.appendChild(script);
+
+    const callBack = 'callBack'
+
+    window[callBack] = (data) => {
+      delete window[callBack]
+      document.body.removeChild(script)
+      console.log(data)
+
+      if (data.result === 'success') {
+        emailInput.placeholder = ''
+        emailInput.placeholder = data.msg
+        // successMessageDiv.innerText = ''
+        // successMessageDiv.innerText = data.msg
+        formSubmitButton.setAttribute('disabled', true)
+
+        //reset form values
+        formInputs.forEach(input => input.value = '')
+      } else {
+        if (data.msg.split(' ').length > 6) {
+          console.log(data.msg)
+          // const errorMessage = data.msg.split(' ').slice(0, 4).join(' ')
+          // successMessageDiv.innerText = ''
+          // successMessageDiv.innerText = errorMessage
+        } else {
+          console.log(data.msg)
+          // successMessageDiv.innerText = ''
+          // successMessageDiv.innerText = data.msg
+        }
+      }
+    }
+  })
 }
 
 // move this to the tabs module
