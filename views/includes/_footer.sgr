@@ -59,7 +59,7 @@ footer
           input.form__input.form__input--name(type="text" name='NAME' id='mce-NAME' value="" placeholder="Name" required)
 			  .form__input-group.form__input-group--submit
           label.form__label
-			  	input.form__input.form__input--email(type="text" name='EMAIL' id='mce-EMAIL' value="" placeholder="Email Address" required)
-			  	button.form__btn.form__btn--submit(type="submit")
+			  	input.form__input.form__input--email(type="email" name='EMAIL' id='mce-EMAIL' value="" placeholder="Email Address" required)
+			  	button.form__btn.form__btn--submit(type="button")
 
 		  span.form-success.is-hidden Thanks for subscribing!
