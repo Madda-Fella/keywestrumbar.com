@@ -64,16 +64,16 @@ html
         form.form__rum-guide.form__mc-js-rumguide-signup
           label.rum-guide__label(for='email')
           input.rum-guide__input(type='email' name='EMAIL' id='mce-EMAIL' placeholder='Email' required)
-          button.rum-guide__btn.form__btn--submit(type='button') get the rum guide
+          button.rum-guide__btn.form__btn--submit(type='button') {{ item.drink[0].ctaText }}
 
       section#footer-cta
 
         .footer-cta__header
-          h2.footer-cta__title BOOK THE EXPERIENCE: HAPPY HOUR on the pier
-          p.footer-cta__body Sunset Pier is “the” place in Key West to enjoy Gulf side waterfront dining. Sit back and enjoy breathtaking views that make you feel far from home.
+          h2.footer-cta__title {{ item.expFooter[0].header }}
+          p.footer-cta__body {{ item.expFooter[0].hero }}
 
         .footer-cta__cta
-          a.footer-cta__btn(href='{{ item.experienceFooter[0].ctaLink }}' target='_blank') book now
+          a.footer-cta__btn(href='{{ item.expFooter[0].ctaLink }}' target='_blank') {{ item.expFooter[0].ctaText }}
 
 
       include(src='/includes/_footer.sgr')
