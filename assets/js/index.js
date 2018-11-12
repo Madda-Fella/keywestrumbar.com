@@ -57,6 +57,8 @@ if (document.querySelector('.form__mc-js-rumguide-signup')) {
   formSubmitButton.addEventListener('click', (e) => {
     e.preventDefault()
 
+    const errMsgCheck = `already subscribed`
+
     // Create & add post script to the DOM
     const script = document.createElement('script');
     script.src = `${url}&${serialize(form)}`;
@@ -75,20 +77,33 @@ if (document.querySelector('.form__mc-js-rumguide-signup')) {
         // successMessageDiv.innerText = ''
         // successMessageDiv.innerText = data.msg
         formSubmitButton.setAttribute('disabled', true)
+        formSubmitButton.classList.add('disabled')
 
         //reset form values
         formInputs.forEach(input => input.value = '')
-      } else {
-        if (data.msg.split(' ').length > 6) {
-          console.log(data.msg)
+      } else if (data.msg.includes(errMsgCheck)) {
+        const returnMsg = `You're already subscribed`
+        emailInput.placeholder = ''
+        emailInput.value = ''
+        emailInput.placeholder = returnMsg
+        formSubmitButton.setAttribute('disabled', true)
+        formSubmitButton.classList.add('disabled')
+        // if (data.msg.split(' ').length > 6) {
+        //   const msg = data.msg
+        //   const check = `already subscribed`
+
           // const errorMessage = data.msg.split(' ').slice(0, 4).join(' ')
           // successMessageDiv.innerText = ''
           // successMessageDiv.innerText = errorMessage
-        } else {
-          console.log(data.msg)
-          // successMessageDiv.innerText = ''
-          // successMessageDiv.innerText = data.msg
-        }
+      } else {
+        const returnMsg = `Too many attempts with this email`
+        emailInput.placeholder = ''
+        emailInput.value = ''
+        emailInput.placeholder = returnMsg
+        formSubmitButton.setAttribute('disabled', true)
+        formSubmitButton.classList.add('disabled')
+        // successMessageDiv.innerText = ''
+        // successMessageDiv.innerText = data.msg
       }
     }
   })
