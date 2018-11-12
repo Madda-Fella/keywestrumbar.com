@@ -1,12 +1,15 @@
 // import modules
 import {serialize} from '../js/modules/serialize'
 
+const errMsgCheck = `already subscribed`
+
 // form submission
 
 if (document.querySelector('.form__mc-js-rumbar-signup')) {
   const form = document.querySelector('.form__mc-js-rumbar-signup')
   const formInputs = form.querySelectorAll('input')
   const formSubmitButton = form.querySelector('.form__btn--submit')
+  const emailInput = form.querySelector('.form__input--email')
   const url = `https://maddafella.us13.list-manage.com/subscribe/post-json?u=3227b92f0c70395f6cb82d51b&amp;id=50bb67b678&c=callBack`
   let successMessageDiv = document.querySelector('.fc-news__header')
 
@@ -24,24 +27,27 @@ if (document.querySelector('.form__mc-js-rumbar-signup')) {
     window[callBack] = (data) => {
       delete window[callBack]
       document.body.removeChild(script)
-      console.log(data)
 
       if (data.result === 'success') {
-        successMessageDiv.innerText = ''
-        successMessageDiv.innerText = data.msg
+        emailInput.placeholder = ''
+        emailInput.value = ''
+        emailInput.placeholder = data.msg
         formSubmitButton.setAttribute('disabled', true)
 
         //reset form values
         formInputs.forEach(input => input.value = '')
+
+      } else if (data.msg.includes(errMsgCheck)) {
+        const returnMsg = `You're already subscribed`
+        emailInput.placeholder = ''
+        emailInput.value = ''
+        emailInput.placeholder = returnMsg
+
       } else {
-        if (data.message.split(' ').length > 6) {
-          const errorMessage = data.msg.split(' ').slice(0, 4).join(' ')
-          successMessageDiv.innerText = ''
-          successMessageDiv.innerText = errorMessage
-        } else {
-          successMessageDiv.innerText = ''
-          successMessageDiv.innerText = data.msg
-        }
+        const returnMsg = `Too many attempts with this email`
+        emailInput.placeholder = ''
+        emailInput.value = ''
+        emailInput.placeholder = returnMsg
       }
     }
   })
@@ -57,8 +63,6 @@ if (document.querySelector('.form__mc-js-rumguide-signup')) {
   formSubmitButton.addEventListener('click', (e) => {
     e.preventDefault()
 
-    const errMsgCheck = `already subscribed`
-
     // Create & add post script to the DOM
     const script = document.createElement('script');
     script.src = `${url}&${serialize(form)}`;
@@ -69,13 +73,10 @@ if (document.querySelector('.form__mc-js-rumguide-signup')) {
     window[callBack] = (data) => {
       delete window[callBack]
       document.body.removeChild(script)
-      console.log(data)
 
       if (data.result === 'success') {
         emailInput.placeholder = ''
         emailInput.placeholder = data.msg
-        // successMessageDiv.innerText = ''
-        // successMessageDiv.innerText = data.msg
         formSubmitButton.setAttribute('disabled', true)
         formSubmitButton.classList.add('disabled')
 
@@ -88,13 +89,6 @@ if (document.querySelector('.form__mc-js-rumguide-signup')) {
         emailInput.placeholder = returnMsg
         formSubmitButton.setAttribute('disabled', true)
         formSubmitButton.classList.add('disabled')
-        // if (data.msg.split(' ').length > 6) {
-        //   const msg = data.msg
-        //   const check = `already subscribed`
-
-          // const errorMessage = data.msg.split(' ').slice(0, 4).join(' ')
-          // successMessageDiv.innerText = ''
-          // successMessageDiv.innerText = errorMessage
       } else {
         const returnMsg = `Too many attempts with this email`
         emailInput.placeholder = ''
@@ -102,8 +96,6 @@ if (document.querySelector('.form__mc-js-rumguide-signup')) {
         emailInput.placeholder = returnMsg
         formSubmitButton.setAttribute('disabled', true)
         formSubmitButton.classList.add('disabled')
-        // successMessageDiv.innerText = ''
-        // successMessageDiv.innerText = data.msg
       }
     }
   })
@@ -204,7 +196,6 @@ setTimeout(function() {if (location.hash) {
     const closeBtn = document.querySelector('.lightbox__close')
 
     const setImage = (e) => {
-      console.log(e.target)
       lightboxImg.setAttribute('src', e.target.dataset.img)
       lightboxImg.setAttribute('data-img', e.target.dataset.img)
     }
@@ -214,8 +205,6 @@ setTimeout(function() {if (location.hash) {
       let currentImgPath = currentImg.dataset.img
       let currentIndex = imagePathArr.indexOf(currentImgPath)
       let nextImgPath = currentIndex === 6 ? 0 : currentIndex + 1
-      console.log(currentIndex)
-      console.log(imagePathArr[currentIndex + 1])
 
       currentImg.setAttribute('src', imagePathArr[nextImgPath])
       currentImg.setAttribute('data-img', imagePathArr[nextImgPath])
@@ -226,8 +215,6 @@ setTimeout(function() {if (location.hash) {
       let currentImgPath = currentImg.dataset.img
       let currentIndex = imagePathArr.indexOf(currentImgPath)
       let prevImgPath = currentIndex === 0 ? 6 : currentIndex - 1
-      console.log(currentIndex)
-      console.log(imagePathArr[currentIndex - 1])
 
       currentImg.setAttribute('src', imagePathArr[prevImgPath])
       currentImg.setAttribute('data-img', imagePathArr[prevImgPath])
