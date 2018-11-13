@@ -1,0 +1,10 @@
+section#hp-rumguide
+
+  h2.h1.hp-rumguide__header {{ dato.hp_rum_guide[0].title }}
+  p.hp-rumguide__body {{ dato.hp_rum_guide[0].body }}
+
+  form.form__rum-guide.form__mc-js-rumguide-signup
+    label.rum-guide__label(for='email')
+    input.rum-guide__input(type='email' name='EMAIL' id='mce-EMAIL' placeholder='Email' required)
+    button.rum-guide__btn.form__btn--submit(type='button') {{ dato.hp_rum_guide[0].ctaText }}
+

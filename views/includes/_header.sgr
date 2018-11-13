@@ -11,6 +11,11 @@ header.header
           | About
           em •
       li.primary-nav__list-item
+        a.primary-nav__link(href="#scroll-hp-rumguide" data-href='#scroll-hp-rumguide')
+          em •
+          | Rumguide
+          em •
+      li.primary-nav__list-item
         a.primary-nav__link(href="#scroll-hp-events" data-href='#scroll-hp-events')
           em •
           | Events
