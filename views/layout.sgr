@@ -1,16 +1,21 @@
 doctype html
 html
   head
+    block(name='title')
+      title {{ dato._meta.globalSeo.fallbackSeo.title }}
+      meta(name='description' content='{{ dato._meta.globalSeo.fallbackSeo.description }}')
+      meta(property='og:locale' content='en_US')
+      meta(property='og:type' content='website')
+      meta(property='og:title' content='{{ dato._meta.globalSeo.fallbackSeo.title }}')
+      meta(property='og:description' content='{{ dato._meta.globalSeo.fallbackSeo.description }}')
+      meta(property='og:image' content='{{ dato._meta.imgixHost + dato._meta.favicon.path }}')
+
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='description' content='')
     meta(name='author' content='asasmith')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')
     link(rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png')
-
-    block(name='title')
-      title Title of Your Site
 
     link(rel='stylesheet' href='css/index.css')
 
