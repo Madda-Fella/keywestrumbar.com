@@ -1,0 +1,70 @@
+#hp-rumguide
+  align-items: center
+  background: url('/img/background-horizontal-dark-wood-copy.jpg') no-repeat center center
+  background-size: cover
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-height: 40vh
+
+  @media screen and (max-width: 600px)
+    padding-top: 1rem
+
+  & .hp-rumguide__header
+    color: var(--white)
+    margin-bottom: 2rem
+
+  & .hp-rumguide__body
+    color: var(--white)
+    margin-bottom: 2rem
+    max-width: 28rem
+    text-align: center
+
+  & .form__rum-guide
+    display: flex
+    justify-content: center
+
+    @media screen and (max-width: 600px)
+      flex-direction: column
+      margin: 0 auto 2rem
+      width: 90%
+
+  & .rum-guide__label
+    display: none
+
+  & .rum-guide__input
+    border-radius: .5rem
+    font-family: var(--bodyFont)
+    font-size: 1.2rem
+    margin-right: 2rem
+    padding-left: 1rem
+    width: 30rem
+
+    @media screen and (max-width: 600px)
+      height: 3rem
+      margin-bottom: 2rem
+      margin-right: 0
+      width: auto
+
+    @media screen and (max-width: 1000px)
+      max-height: 4rem
+
+  & .rum-guide__btn
+    background-color: var(--brandPrimary)
+    border-radius: .5rem
+    border: none
+    color: var(--white)
+    font-family: var(--headerFont)
+    font-size: 2rem
+    padding: .5rem 1rem
+
+    &.disabled
+      pointer-events: none
+      background-color: var(--lt-grey)
+      color: var(--md-grey)
+
+    @media screen and (max-width: 600px)
+      align-self: center
+
+    @media screen and (max-width: 1000px)
+      width: 15rem

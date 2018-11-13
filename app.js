@@ -39,6 +39,9 @@ module.exports = {
           name: 'hp_event',
         },
         {
+          name: 'hp_rum_guide',
+        },
+        {
           name: 'hp_gallery',
         },
         {
