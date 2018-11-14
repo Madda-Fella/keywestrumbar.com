@@ -14,7 +14,7 @@ html
 
       else
         meta(name='title' content='{{ item.title }}')
-        meta(name='description' content='{{ item.description }}')
+        meta(name='description' content='{{ item.hero }}')
         meta(property='og:title' content='{{ item.title }}')
         meta(property='og:description' content='{{ item.hero }}')
         meta(property='og:image' content='{{ dato._meta.imgixHost + item.hpImage.path }}')
