@@ -26,7 +26,7 @@ module.exports = {
     warnForDuplicates: env !== 'production'
   }),
   babel: jsStandards(),
-  server: {open: false},
+  // server: {open: false},
   plugins: [
     new SpikeDatoCMS({
       addDataTo: locals,
@@ -49,13 +49,6 @@ module.exports = {
         },
         {
           name: 'hours_of_op',
-        },
-        {
-          name: 'mf_exp_page',
-          template: {
-            path: 'views/mf-exp-landing-template.sgr',
-            output: (lp) => { return `shop-the-experience/${lp.title.toLowerCase()}.html`},
-          },
         },
       ],
       json: 'data.json'
